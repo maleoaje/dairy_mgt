@@ -16,7 +16,18 @@ class DairyCardsPng extends StatelessWidget {
       height: 130,
       padding: const EdgeInsets.all(6),
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(20)),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xff37CCFF).withOpacity(.7),
+            blurStyle: BlurStyle.normal,
+            spreadRadius: 2,
+            blurRadius: 10,
+            offset: const Offset(0, 0),
+          ),
+        ],
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
