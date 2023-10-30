@@ -21,7 +21,7 @@ class GetStarted extends StatelessWidget {
           children: [
             Positioned(
               top: 0,
-              left: -330,
+              left: -350,
               child: Transform.rotate(
                 angle: -45 * 2.98 / 180,
                 child: Container(
@@ -30,20 +30,20 @@ class GetStarted extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(140),
                     gradient: LinearGradient(
-                      stops: const [0.2, 1],
-                      tileMode: TileMode.decal,
+                      stops: const [0.5, 1],
+                      tileMode: TileMode.clamp,
                       begin: Alignment.topRight,
                       end: Alignment.bottomRight,
                       colors: [
-                        const Color.fromARGB(255, 79, 84, 236).withOpacity(.7),
-                        const Color(0xff4449D5).withOpacity(.1),
+                        const Color.fromARGB(255, 79, 84, 236).withOpacity(.5),
+                        const Color(0xff4449D5).withOpacity(.3),
                       ],
                     ),
                     boxShadow: const [
                       BoxShadow(
-                        color: Color.fromARGB(21, 0, 0, 0),
+                        color: Color.fromARGB(40, 0, 0, 0),
                         blurStyle: BlurStyle.normal,
-                        spreadRadius: .9,
+                        spreadRadius: 4,
                         blurRadius: 20,
                         offset: Offset(10, 10),
                       ),
@@ -53,13 +53,13 @@ class GetStarted extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 60, 20, 20),
+              padding: const EdgeInsets.fromLTRB(20, 50, 20, 20),
               child: Column(
                 children: [
                   Center(
                     child: Image.asset(
                       'assets/logo.png',
-                      height: 230,
+                      height: 170,
                     ),
                   ),
                   const SizedBox(
@@ -105,14 +105,14 @@ class GetStarted extends StatelessWidget {
                   ),
                   const Text(
                     '"All things',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                   const SizedBox(
                     height: 10,
                   ),
                   const Text(
                     'One place to manage"',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                   const SizedBox(
                     height: 50,
@@ -135,14 +135,14 @@ class GetStarted extends StatelessWidget {
                       ),
                       onPressed: () {},
                       child: const Padding(
-                        padding: EdgeInsets.fromLTRB(30, 4, 30, 4),
+                        padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               'GET STARTED',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 18),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                               textAlign: TextAlign.center,
                             ),
                           ],

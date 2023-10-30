@@ -13,7 +13,7 @@ class DairyCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 145,
+      width: 135,
       height: 130,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
@@ -21,7 +21,7 @@ class DairyCards extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xff37CCFF).withOpacity(.7),
+            color: const Color(0xff37CCFF).withOpacity(.5),
             blurStyle: BlurStyle.normal,
             spreadRadius: 2,
             blurRadius: 10,
