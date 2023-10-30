@@ -1,6 +1,3 @@
-import 'dart:async';
-
-import 'package:dairy_mgt/get_started.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -16,12 +13,12 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(
-      const Duration(seconds: 2),
-      (() => Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => const GetStarted()),
-          (Route<dynamic> route) => false)),
-    );
+    // Timer(
+    //   const Duration(seconds: 5),
+    //   (() => Navigator.of(context).pushAndRemoveUntil(
+    //       MaterialPageRoute(builder: (context) => const GetStarted()),
+    //       (Route<dynamic> route) => false)),
+    // );
   }
 
   @override
@@ -30,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              stops: [0, .4],
+              stops: [0, .8],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [Color(0xff3CD0FF), Color(0xff4C1FC7)],
@@ -39,8 +36,8 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Stack(
             children: [
               Positioned(
-                top: 20,
-                left: -250,
+                top: 0,
+                left: -280,
                 child: Transform.rotate(
                   angle: -45 * 2.98 / 180,
                   child: Container(
@@ -49,22 +46,22 @@ class _SplashScreenState extends State<SplashScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(140),
                       gradient: LinearGradient(
-                        stops: const [0.1, .7],
-                        tileMode: TileMode.decal,
+                        stops: const [0.6, 1],
+                        tileMode: TileMode.clamp,
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          const Color(0xff4449D5).withOpacity(.15),
-                          const Color(0xff4449D5).withOpacity(.15),
+                          const Color(0xff3CD0FF).withOpacity(.1),
+                          const Color(0xff3CD0FF).withOpacity(.1),
                         ],
                       ),
-                      boxShadow: const [
+                      boxShadow: [
                         BoxShadow(
-                          color: Color.fromARGB(21, 0, 0, 0),
+                          color: const Color(0xff4C1FC7).withOpacity(.17),
                           blurStyle: BlurStyle.normal,
-                          spreadRadius: .9,
+                          spreadRadius: 10,
                           blurRadius: 20,
-                          offset: Offset(10, 10),
+                          offset: const Offset(0, 10),
                         ),
                       ],
                     ),
